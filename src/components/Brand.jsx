@@ -1,1 +1,0 @@
-export default function Brand({ small = false }) { return <div className={`brand ${small ? 'brand-small' : ''}`}><img className="brand-mark" src="/assets/wellcare-logo.png" alt="" aria-hidden="true"/><span>wellcare<span className="brand-dot">.</span></span></div>; }
