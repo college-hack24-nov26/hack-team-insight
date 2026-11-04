@@ -1,0 +1,15 @@
+{
+  "name": "wellcare",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "node --watch backend/src/server.js",
+    "dev:frontend": "npm --workspace frontend run dev",
+    "build": "npm --workspace frontend run build",
+    "test": "npm --workspace backend test",
+    "start": "node backend/src/server.js"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
+}
